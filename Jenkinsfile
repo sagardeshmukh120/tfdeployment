@@ -5,8 +5,42 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
+                    function main()
+{
+  echo "-------------------- Main ----------------------"
+  gitClone
+  TFDestroy
+  TFDeploy
+}
+
+function TFDeploy()
+{
+  echo "-------------------- TFDeploy ----------------------"
+}
+
+function TFDestroy()
+{
+  echo "-------------------- TFDestroy ----------------------"
+  AnsibleRole
+
+}
+
+function gitClone()
+{
+  echo "-------------------- gitClone ----------------------"
+
+}
+
+function AnsibleRole()
+{
+  echo "-------------------- AnsibleRole ----------------------"
+
+}
+
+main
+
+
+
                 '''
             }
         }
