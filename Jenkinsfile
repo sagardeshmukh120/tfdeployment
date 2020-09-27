@@ -15,7 +15,7 @@ import java.io.File
 def main(){
 
     git url: 'https://github.com/sagardeshmukh120/envname.git'
-    new File("file.txt").eachLine {  
+    new File("/var/lib/jenkins/workspace/tfdeployment/file.txt").eachLine {  
          line -> println "line : $line"; 
 }
 }
