@@ -6,7 +6,7 @@ pipeline {
                 sh 'echo "Hello World"'
                 sh '''
 
-                    main
+                    sh main
                     function main()
                     {
                         echo "-------------------- Main ----------------------"
