@@ -18,3 +18,4 @@ def main(){
     new File("file.txt").eachLine {  
          line -> println "line : $line"; 
 }
+}
