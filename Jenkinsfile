@@ -5,16 +5,9 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
 
-                
-                
-                 DisplayName();
+                 git url: 'https://github.com/sagardeshmukh120/envname.git'
             }
         }
     }
 }
 
-
-def DisplayName() {
-                    println("This is how methods work in groovy");
-                    println("This is an example of a simple method");
-                } 
