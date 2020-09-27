@@ -4,46 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
-                bash '''#!/bin/bash
 
-                    main
-                    function main()
-                    {
-                        echo "-------------------- Main ----------------------"
-                        gitClone
-                        TFDestroy
-                        TFDeploy
-                    }
-
-                    function TFDeploy()
-                    {
-                        echo "-------------------- TFDeploy ----------------------"
-                    }
-
-                    function TFDestroy()
-                    {
-                        echo "-------------------- TFDestroy ----------------------"
-                        AnsibleRole
-
-                    }
-
-                    function gitClone()
-                    {
-                        echo "-------------------- gitClone ----------------------"
-
-                    }
-
-                    function AnsibleRole()
-                    {
-                        echo "-------------------- AnsibleRole ----------------------"
-
-                    }
-
-                    
-
-
-
-                '''
+                def DisplayName() {
+                    println("This is how methods work in groovy");
+                    println("This is an example of a simple method");
+                } 
+                
+                 DisplayName();
             }
         }
     }
