@@ -5,39 +5,41 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
+
+                    main
                     function main()
-{
-  echo "-------------------- Main ----------------------"
-  gitClone
-  TFDestroy
-  TFDeploy
-}
+                    {
+                        echo "-------------------- Main ----------------------"
+                        gitClone
+                        TFDestroy
+                        TFDeploy
+                    }
 
-function TFDeploy()
-{
-  echo "-------------------- TFDeploy ----------------------"
-}
+                    function TFDeploy()
+                    {
+                        echo "-------------------- TFDeploy ----------------------"
+                    }
 
-function TFDestroy()
-{
-  echo "-------------------- TFDestroy ----------------------"
-  AnsibleRole
+                    function TFDestroy()
+                    {
+                        echo "-------------------- TFDestroy ----------------------"
+                        AnsibleRole
 
-}
+                    }
 
-function gitClone()
-{
-  echo "-------------------- gitClone ----------------------"
+                    function gitClone()
+                    {
+                        echo "-------------------- gitClone ----------------------"
 
-}
+                    }
 
-function AnsibleRole()
-{
-  echo "-------------------- AnsibleRole ----------------------"
+                    function AnsibleRole()
+                    {
+                        echo "-------------------- AnsibleRole ----------------------"
 
-}
+                    }
 
-main
+                    
 
 
 
