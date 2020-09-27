@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
-                sh '''
+                bash '''#!/bin/bash
 
                     sh main
                     function main()
