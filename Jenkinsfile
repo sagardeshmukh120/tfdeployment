@@ -5,9 +5,16 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
 
-                 git url: 'https://github.com/sagardeshmukh120/envname.git'
+                 main()
             }
         }
     }
 }
 
+import java.io.File 
+def main(){
+
+    git url: 'https://github.com/sagardeshmukh120/envname.git'
+    new File("file.txt").eachLine {  
+         line -> println "line : $line"; 
+}
