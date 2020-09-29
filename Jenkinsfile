@@ -14,9 +14,13 @@ pipeline {
                 OldENVCount = `cat file.txt | grep -o -i ${Environment} | wc -l`
                 pwd
               
-				NowebServer = `expr ($OldENVCount * 1) + 1`
-				NoappServer = `expr ($OldENVCount * 5) + 5`
-				NoclusterServer = `expr ($OldENVCount * 0) + 0`
+                web="1"
+                app="5"
+                cls="0"
+
+                NowebServer=$(((${OldENVCount} * ${web}) + ${web} ))
+                NoappServer=$(((${OldENVCount} * ${app}) + ${app}))
+                NoclusterServer=$(((${OldENVCount} * ${cls}) + ${cls}))
 							
 				VMSize="Standard_D4s_v3"
 
