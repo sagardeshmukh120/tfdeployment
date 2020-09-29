@@ -11,7 +11,7 @@ pipeline {
 
                  git clone https://github.com/sagardeshmukh120/envname.git ${HOME_PATH}/new_env/
                  cd ${HOME_PATH}/new_env/
-                OldENVCount = `cat newenv.txt | | grep -o -i ${Environment} | wc -l`
+                OldENVCount = `cat file.txt | grep -o -i ${Environment} | wc -l`
                 pwd
               
 				NowebServer = `expr ($OldENVCount * 1) + 1`
