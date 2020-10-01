@@ -9,6 +9,8 @@ pipeline {
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
                  echo $Number
 
+                 skipRemainingStages = true
+
                  git clone https://github.com/sagardeshmukh120/envname.git ${HOME_PATH}/new_env/
                  cd ${HOME_PATH}/new_env/
                 OldENVCount=`cat file.txt | grep -o -i ${Environment} | wc -l`
