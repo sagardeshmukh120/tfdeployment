@@ -11,7 +11,7 @@ pipeline {
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
                  echo $Number
 
-                 skipRemainingStages = true
+                 #skipRemainingStages = true
 
                  git clone https://github.com/sagardeshmukh120/envname.git ${HOME_PATH}/new_env/
                  cd ${HOME_PATH}/new_env/
@@ -46,7 +46,27 @@ pipeline {
                     '''
             }
         }
+
+        stage('Trigger second pipeline') {
+
+            steps {
+                script {
+                            echo "the second build pipeline"
+                                // echo New_ENV_Name
+                            build job: 'secondbuild'
+                            
+                        }
+                            
+                }
+        }
+
+
+
+
+
     }
+
+    
 }
 
 
