@@ -60,6 +60,17 @@ pipeline {
                 }
         }
 
+        stage('After Second Build Trigger')
+        {
+            steps{
+                    sh '''
+
+                    echo "After Second Build Trigger"
+
+                    '''
+            }
+        }
+
 
 
 
