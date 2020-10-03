@@ -11,6 +11,10 @@ pipeline {
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
                  echo $Number
 
+                 rm -rf ${HOME_PATH}/*
+
+                 rm -rf ${HOME_PATH}/.git
+
                  #skipRemainingStages = true
 
                  git clone https://github.com/sagardeshmukh120/envname.git ${HOME_PATH}/new_env/
