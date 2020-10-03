@@ -17,7 +17,7 @@ pipeline {
 
                  #skipRemainingStages = true
 
-                 git clone https://github.com/sagardeshmukh120/envname.git ${HOME_PATH}/new_env/
+                 git clone git@github.com:sagardeshmukh120/envname.git ${HOME_PATH}/new_env/
                  cd ${HOME_PATH}/new_env/
 
                  sed -i "s/dates=/&$Name,/" ${HOME_PATH}/new_env/file.txt
