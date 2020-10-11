@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
 
-                CBuild=${currentBuild.number}
+                def CBuild=${currentBuild.number}
                  sh '''
                  echo "current build number:"
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
