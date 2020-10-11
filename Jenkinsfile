@@ -5,10 +5,10 @@ pipeline {
         stage('Build') {
             steps {
             
-                sh 'echo "Hello World"'
+                
 
                  sh '''
-                 echo "current build number: ${currentBuild.number}"
+                 echo "current build number:" ${currentBuild.number}
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
                  echo $Number
 
@@ -28,7 +28,7 @@ pipeline {
                  git config --global push.default current
                  git remote -v 
                  git status
-                 git add . ; git commit -m "updated " ; git push
+                 #git add . ; git commit -m "updated " ; git push
 
                 #OldENVCount=`cat file.txt | grep -o -i ${Environment} | wc -l`
                 pwd
