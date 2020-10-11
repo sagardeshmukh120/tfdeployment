@@ -8,6 +8,7 @@ pipeline {
                 sh 'echo "Hello World"'
 
                  sh '''
+                 echo "current build number: ${currentBuild.number}"
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
                  echo $Number
 
