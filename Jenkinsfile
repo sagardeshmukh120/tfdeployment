@@ -5,11 +5,11 @@ pipeline {
         stage('Build') {
             steps {
 
-                echo "current build number: ${currentBuild.number}"
+                CBuild=${currentBuild.number}
                  sh '''
                  echo "current build number:"
                   HOME_PATH="/var/lib/jenkins/workspace/tfdeployment"
-                 echo $Number
+                 echo $CBuild
 
                  rm -rf ${HOME_PATH}/*
 
