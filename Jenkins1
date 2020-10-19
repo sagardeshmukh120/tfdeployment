@@ -7,7 +7,8 @@ pipeline {
                 echo 'Hello World'
                 sh '''#!/bin/bash
                 echo $Action
-                echo $New_VM
+                echo $No_of_appserver
+                echo $No_of_webserver
                               
                 echo $No_of_appserver
                 '''
