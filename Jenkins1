@@ -1,3 +1,4 @@
+def build = build.previousBuild
 pipeline {
     agent any
 
@@ -5,7 +6,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                def build = build.previousBuild
+                
                 sh '''#!/bin/bash
                 echo $Action
                 echo $No_of_appserver
