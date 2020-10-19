@@ -8,8 +8,7 @@ pipeline {
                 sh '''#!/bin/bash
                 echo $Action
                 echo $New_VM
-                echo $web_server
-                
+                              
                 echo $No_of_appserver
                 '''
             }
