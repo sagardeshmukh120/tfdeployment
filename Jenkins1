@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh '''#!/bin/bash
+                echo $Action
                 echo $New_VM
                 echo $web_server
                 
