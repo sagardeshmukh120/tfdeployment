@@ -5,12 +5,14 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+                build = build.previousBuild
                 sh '''#!/bin/bash
                 echo $Action
                 echo $No_of_appserver
                 echo $No_of_webserver
                               
                 echo $No_of_appserver
+                echo $build
                 '''
             }
         }
